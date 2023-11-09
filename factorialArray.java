@@ -10,3 +10,20 @@ This.result = result;
 
 }
 
+@override
+Public void run(){
+result[i] = factorial(i);
+}
+
+Long factorial(int i){
+
+ return factorialHelper(1, i)
+}
+
+long factorial(long accum, int i){
+
+if(i>=1) return factorialHelper(accum*i, i-1);
+
+return accum;
+
+}
