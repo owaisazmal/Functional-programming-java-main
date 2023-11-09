@@ -1,29 +1,27 @@
 import java.util.*;
-public class factorialArray implement runnable {
+
+public class factorialArray implements Runnable {
     int i;
-    Long[]result;
-}
-factorialArray(long[]result, int i){
+    Long[] result;
 
-This.i = i;
-This.result = result;
+    public factorialArray(Long[] result, int i) {
+        this.i = i;
+        this.result = result;
+    }
 
-}
+    @Override
+    public void run() {
+        result[i] = factorial(i);
+    }
 
-@override
-Public void run(){
-result[i] = factorial(i);
-}
+    private Long factorial(int i) {
+        return factorialHelper(1L, i);
+    }
 
-Long factorial(int i){
-
- return factorialHelper(1, i)
-}
-
-long factorial(long accum, int i){
-
-if(i>=1) return factorialHelper(accum*i, i-1);
-
-return accum;
-
+    private Long factorialHelper(long accum, int i) {
+        if (i >= 1) {
+            return factorialHelper(accum * i, i - 1);
+        }
+        return accum;
+    }
 }
