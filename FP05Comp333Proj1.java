@@ -127,8 +127,9 @@ public class FP05Comp333Proj1 {
     /*****************************************Q10******************************************/
 
     static int sum2DArray(int[][] input) {
-        return Arrays.stream(input).mapToInt(x
-           ->Arrays.stream(x).reduce(0, (a,b) -> a + b)
-          ).reduce(0, (a,b) -> a + b); 
+        return Arrays.stream(input)
+            .mapToInt(x->Arrays.stream(x)
+            .reduce(0, (a,b) -> a + b))
+            .reduce(0, (a,b) -> a + b); 
      }
 }
