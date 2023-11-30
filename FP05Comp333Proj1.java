@@ -6,8 +6,11 @@ import java.util.stream.IntStream;
 
 public class FP05Comp333Proj1 {
     public static void main(String[] args) {
-        //printString("Owais");   //Q1
-        //System.out.println(Arrays.toString(intRandom1DArray(9)));    //Q2
+        //Q1
+        //printString("Owais");   
+
+         //Q2
+        //System.out.println(Arrays.toString(intRandom1DArray(9)));   
         
         /*Q3 
         int row = 2;
@@ -21,9 +24,36 @@ public class FP05Comp333Proj1 {
             System.out.println();
         }
         */
+        //Q5
+        //promptForInput("Your Name: ");    
 
-        //promptForInput("Your Name: ");    //Q5
-        System.out.println(Arrays.toString(orderedArray(10)));  //Q6 
+        //Q6
+        //System.out.println(Arrays.toString(orderedArray(10)));   
+
+        /*
+        //Q7
+        int row = 2;
+        int col = 2;
+        int[][] ordered2DArray = ordered2DArray(row, col);
+
+        for (int[] rowArray : ordered2DArray) {
+            for (int num : rowArray) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+        */
+
+        int arr[] = {1, 2, 3};
+        int twoDArr[][] = {{1,2,3}, {1, 2 ,3}};
+        //Q8
+        //System.out.println(sumArray(arr));
+
+        //Q9
+        //System.out.println(averageArray(arr));
+
+        //Q10
+        System.out.println(sum2DArray(twoDArr));
     }
 
     /*****************************************Q1******************************************/
@@ -68,8 +98,37 @@ public class FP05Comp333Proj1 {
 
     }
     /*****************************************Q6******************************************/
-
+    
     static int[] orderedArray(int size) {
         return IntStream.range(0, size).toArray();
     }
+ 
+    /*****************************************Q7******************************************/
+    
+    static int[][] ordered2DArray(int row, int col) { 
+        return IntStream
+        .range(0, row)
+        .mapToObj(x -> IntStream.range(x*10, x*10+col) .toArray())
+        .toArray(int[][]::new);
+    }
+
+    /*****************************************Q8******************************************/
+    
+    static int sumArray(int[] input){ 
+        return Arrays.stream(input).reduce(0, (a,b) -> a + b); 
+    }
+
+    /*****************************************Q9******************************************/
+    
+    static int averageArray(int[] input) { 
+        return Arrays.stream(input).reduce(0, (a,b) -> a + b)/input.length; 
+    }
+
+    /*****************************************Q10******************************************/
+
+    static int sum2DArray(int[][] input) {
+        return Arrays.stream(input).mapToInt(x
+           ->Arrays.stream(x).reduce(0, (a,b) -> a + b)
+          ).reduce(0, (a,b) -> a + b); 
+     }
 }
