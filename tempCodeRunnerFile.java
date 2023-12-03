@@ -1,1 +1,1 @@
-rowArray
+        System.out.println(sumArray(arr));

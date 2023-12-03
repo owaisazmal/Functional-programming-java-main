@@ -6,54 +6,59 @@ import java.util.stream.IntStream;
 
 public class FP05Comp333Proj1 {
     public static void main(String[] args) {
+        int arr[] = {1, 2, 3};
+        int twoDArr[][] = {{1, 2, 3}, {4, 5, 6}};
+        
         //Q1
         //printString("Owais");   
 
          //Q2
         //System.out.println(Arrays.toString(intRandom1DArray(9)));   
         
-        /*Q3 
-        int row = 2;
-        int col = 3;
-        int[][] random2DArray = intRand2DArray(row, col);
+        //Q3 
+        // int row = 2;
+        // int col = 3;
+        // int[][] random2DArray = intRand2DArray(row, col);
 
-        for (int[] rowArray : random2DArray) {
-            for (int num : rowArray) {
-                System.out.print(num + " ");
-            }
-            System.out.println();
-        }
-        */
+        // for (int[] rowArray : random2DArray) {
+        //     for (int num : rowArray) {
+        //         System.out.print(num + " ");
+        //     }
+        //     System.out.println();
+        // }
+        
+        
+        //Q4
+        //System.out.println(int2DArrayToString(twoDArr));
+        
         //Q5
         //promptForInput("Your Name: ");    
-
+        
         //Q6
         //System.out.println(Arrays.toString(orderedArray(10)));   
+        
+        
+        // //Q7
+        // int row = 2;
+        // int col = 2;
+        // int[][] ordered2DArray = ordered2DArray(row, col);
+        
+        // for (int[] rowArray : ordered2DArray) {
+        //     for (int num : rowArray) {
+        //         System.out.print(num + " ");
+        //     }
+        //     System.out.println();
+        // }
+        
 
-        /*
-        //Q7
-        int row = 2;
-        int col = 2;
-        int[][] ordered2DArray = ordered2DArray(row, col);
-
-        for (int[] rowArray : ordered2DArray) {
-            for (int num : rowArray) {
-                System.out.print(num + " ");
-            }
-            System.out.println();
-        }
-        */
-
-        int arr[] = {1, 2, 3};
-        int twoDArr[][] = {{1,2,3}, {1, 2 ,3}};
         //Q8
         //System.out.println(sumArray(arr));
-
+        
         //Q9
         //System.out.println(averageArray(arr));
 
         //Q10
-        System.out.println(sum2DArray(twoDArr));
+        //System.out.println(sum2DArray(twoDArr));
     }
 
     /*****************************************Q1******************************************/
